@@ -7,7 +7,7 @@ SECRET_KEY = 'ib37rab14!3nqv*v@kcfbnsk=5_fa-=!s0^+dq9l+v13^6ki#z'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-DATABASES = {
+""" DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.postgresql',
         #'NAME':'ofrjaana',
@@ -22,8 +22,19 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
-}
+} """
 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':   'blog',                      
+        'USER': 'bloguser',
+        'PASSWORD': 'blog2018',
+        'HOST': 'localhost',
+        'PORT': 5432,
+    }
+}
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
